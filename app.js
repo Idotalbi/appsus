@@ -2,10 +2,6 @@ import { router } from './router.js';
 
 import AppHeader from './cmps/AppHeader.js'
 import AppFooter from './cmps/AppFooter.js'
-
-// import BookIndex from './cmps/BookIndex.js'
-
-// import Home from './pages/Home.js'
 import UserMsg from './pages/UserMsg.js'
 import About from './pages/About.js'
 
