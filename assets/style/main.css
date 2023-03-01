@@ -25,3 +25,9 @@
 @import 'cmps/About.css';
 
 @import 'setup/Mq.css';
+
+
+
+/* notes */
+
+@import '/assets/apps/notes/note-app.css';
