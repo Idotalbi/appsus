@@ -1,0 +1,90 @@
+.review-add form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-add h1 {
+    font-size: 1.5rem;
+}
+
+.review-add label {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.review-add input,
+select {
+    font-size: 1.3rem;
+}
+
+textarea {
+    width: 400px;
+    font-size: 1.3rem;
+}
+
+.add-review-btn {
+    margin-top: 10px;
+    width: 100px;
+    border: 2px solid var(--clr2);
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: white;
+    color: rgb(86, 85, 85);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.review {
+    width: 40%;
+    padding: 10px;
+    border-bottom: 7px solid var(--clr2);
+    margin-top: 10px;
+}
+
+.review h1 {
+    font-size: 1.3rem;
+}
+
+.reviews-title {
+    font-size: 1.3rem;
+
+}
+
+.review-preview p {
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+.review-txt {
+    font-size: 1.3rem;
+}
+
+
+
+.remove-review {
+    color: var(--clr3);
+    float: right;
+    font-size: 1.2rem;
+
+}
+
+.remove-review:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.book-preview p {
+    font-size: 1.3rem;
+}
+
+.book-preview {
+    padding: 10px;
+}
+
+.book-preview img {
+    width: 300px;
+    padding: 10px;
+
+}

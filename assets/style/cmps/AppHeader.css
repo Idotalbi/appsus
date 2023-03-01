@@ -1,0 +1,36 @@
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 5vh;
+
+    padding: 10px;
+    background-color: lightblue;
+    background-image: var(--clr1);
+}
+
+.app-header h1 {
+    margin: 0;
+    color: seashell
+}
+
+.app-header nav {
+    display: flex;
+    gap: 10px;
+    color: seashell
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: snow;
+    border-radius: 10.286rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10rem;
+    background-image: var(--clr4);
+}

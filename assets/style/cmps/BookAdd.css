@@ -1,0 +1,48 @@
+.book-add {
+    padding: 10px;
+}
+
+
+.book-add input {
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+    font-size: 1em;
+    padding: 5px;
+}
+
+
+.book-add li {
+    display: flex;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.book-add h1 {
+    margin-left: 20px;
+    font-size: 1em;
+}
+
+.book-add li button {
+    background-color: var(--clr2);
+    border-radius: 50%;
+}
+
+.book-add li button:hover {
+    background-color:var(--clr3);
+    cursor: pointer;
+}
+
+.search-button {
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1em;
+    background-color: white;
+}
+
+.search-button:hover {
+    cursor: pointer;
+}

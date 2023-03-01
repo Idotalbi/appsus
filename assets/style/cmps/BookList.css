@@ -1,0 +1,42 @@
+
+
+
+
+.book-list li {
+    text-align: center;
+    border: 3px solid var(--clr2);
+    border-radius: 10px;
+    /* margin-inline-start: 2.7em; */
+}
+
+
+
+.book-list .details-btn {
+    border-radius: 3px;
+    border: solid var(--clr2);
+    background-color: var(--clr2);
+    color: snow;
+    padding: 5px;
+
+}
+
+.book-list .details-btn:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.book-list button {
+    cursor: pointer;
+    border: solid var(--clr2);
+    background-color: var(--clr2);
+    margin: 10px;
+    border-radius: 5px;
+    color: snow;
+    font-size: 1.3rem;
+    width: 40px;
+    height: 35px;
+}
+
+.book-list button:hover {
+    color: black;
+}

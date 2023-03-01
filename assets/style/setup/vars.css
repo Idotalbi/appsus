@@ -1,0 +1,15 @@
+:root {
+  --clr1: linear-gradient(-86deg, rgb(64, 14, 202) 0%, rgb(147, 202, 211) 100%);
+  --clr2: rgb(147, 202, 211);
+  --clr3: rgb(64, 14, 202);
+  --clr4: linear-gradient(-86deg, rgb(147, 202, 211) 0%, rgb(64, 14, 202) 100%);
+  --clr1bg: rgb(153, 166, 149);
+  --clr1bg-light: rgb(205, 221, 200);
+  --clr2bg: rgb(233, 206, 221);
+  --clr2bg-light: rgb(247, 185, 219);
+
+  --gray1: rgb(240, 240, 240);
+  --gray2: rgb(155, 155, 155);
+  --gray3: rgb(44, 44, 44);
+
+}

@@ -1,0 +1,21 @@
+.user-msg {
+    width: fit-content;
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    background-color: var(--clr2);
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+
+.user-msg.success {
+    border: 50px solid var(--clr1);
+}
+
+.user-msg.error {
+    background-color: rgb(221, 25, 25);
+} 
