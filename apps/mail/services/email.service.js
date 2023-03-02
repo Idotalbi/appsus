@@ -1,10 +1,10 @@
-import { utilService } from "../../../services/util.service";
-import { storageService } from "../../../services/async-storage.service";
+import { utilService } from "../../../services/util.service.js";
+import { storageService } from "../../../services/async-storage.service.js";
 
 const MAIL_KEY = 'mailsDB'
 _createMails()
 
-export const mailService = {
+export const emailService = {
     query,
     getUser,
     get,
@@ -20,14 +20,14 @@ const loggedInUser = {
 }
 
 function query() {
-    return storageService.query(STORAGE_KEY)
+    return storageService.query(MAIL_KEY)
         .then(emails => emails.sort((a, b) => {
             return new Date(b.sentAt) - new Date(a.sentAt);
         }))
 }
 
 function get(mailId) {
-    return storageService.get(STORAGE_KEY, mailId)
+    return storageService.get(MAIL_KEY, mailId)
 }
 
 function getUser() {
@@ -38,7 +38,7 @@ function changeReadMode(mailId) {
     return get(mailId)
         .then((email) => {
             email.isRead = !email.isRead;
-            return storageService.put(STORAGE_KEY, email)
+            return storageService.put(MAIL_KEY, email)
         })
 }
 
@@ -54,12 +54,12 @@ function sentEmail(to, subject, body) {
         from: { name: loggedInUser.fullName, email: loggedInUser.email },
         to: { name: to, email: to }
     }
-    return storageService.post(STORAGE_KEY, newSentEmail);
+    return storageService.post(MAIL_KEY, newSentEmail);
 }
 
 
 function _createMails() {
-    let emails = utilService.loadFromStorage(STORAGE_KEY);
+    let emails = utilService.loadFromStorage(MAIL_KEY);
     if (!emails || !emails.length) {
         emails = [
             {
@@ -151,7 +151,7 @@ function _createMails() {
                 to: { name: 'Raz Kadosh', email: 'raz@appsus.com' }
             },
         ];
-        utilService.saveToStorage(STORAGE_KEY, emails);
+        utilService.saveToStorage(MAIL_KEY, emails);
 
     }
     return emails;
