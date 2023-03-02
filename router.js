@@ -4,6 +4,7 @@ import BookApp from './pages/BookApp.js'
 import BookDetails from './cmps/BookDetails.js'
 import MailApp from './pages/MailApp.js'
 import NotesApp from './pages/NotesApp.js'
+import NoteDetails from './apps/notes/cmps/NoteDetails.js'
 
 
 const routes = [
@@ -30,7 +31,11 @@ const routes = [
     {
         path:'/notes',
         component:NotesApp,
-    }
+    },
+    {
+      path: '/notes/:noteId',
+      component: NoteDetails,
+    },
 ]
 
 

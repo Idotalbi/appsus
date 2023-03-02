@@ -1,0 +1,19 @@
+.search-nav {
+    background-color: white;
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+}
+
+
+.search-nav i {
+    /* margin: 0 7px; */
+    margin: 10px;
+}
+
+.search-nav input {
+    padding: 10px;
+    width: 300px;
+
+}
+

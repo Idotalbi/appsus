@@ -1,38 +1,53 @@
-import { eventBus } from "../../../services/event-bus.service.js"
+import { eventBus } from '../../../services/event-bus.service.js'
+import ColorPalette from './ColorPalette.cmp.js'
 
 export default {
     props: ['note'],
 
     template: `
-     <i class="fa-solid fa-thumbtack" @click.stop="togglePin" title="pinned"></i>
-    <i class="fa-solid fa-palette" @click.stop="showClrP"  title="Change note color"></i>
-    <i class="fa-solid fa-pen-to-square" @click.stop="openEditMode" title="Edit note"></i>
-    <i @click.stop="duplicate" class="fa-regular fa-copy" title="Duplicate note"></i>
-    <i @click.stop="remove" class="fa-solid fa-trash-can" title="Delete note"></i> 
-`,
+    <section class='note-nav-icon'>
+    <div @click="goBack" title="Go Back">
+        <i class="fa-solid fa-arrow-left-long"></i>
+     </div>
+
+     <div class="color-palette" @click="chooseColor = !chooseColor" title="Change note color">
+     <i class="fa-solid fa-palette"></i>
+     <ColorPalette v-if="chooseColor" @updateColor="updateColor"/>
+     </div>
+
+     <div @click="removeNote" title="Delete note">
+     <i class="fa-solid fa-trash-can"></i>
+     </div>
+
+     <div @click="sendNote"  title="Send note">
+        <i class="fa-solid fa-paper-plane"></i>
+     </div>
+
+</section>
+        `,
+    components: {
+        ColorPalette,
+    },
     data() {
         return {
-            isPinned: this.note.isPinned,
+            chooseColor: false,
         }
     },
-    mounted() { },
     methods: {
-        duplicate() {
-            eventBus.emit('duplicate', this.note.id)
+        updateColor(color) {
+            this.$emit('updateColor', color)
         },
-        remove() {
-            eventBus.emit('remove', this.note.id)
+        removeNote() {
+            this.$emit('removeNote')
         },
-        showClrP() {
-            this.$emit('showClrP')
+        goBack() {
+            eventBus.emit('closeEdit')
         },
-        togglePin() {
-            eventBus.emit('togglePin', this.note.id)
-        },
-        openEditMode() {
-            this.$emit('openEditMode')
-        },
-       
+        sendNote() {
+            this.$emit('sendNote')
+        }
+
+
     },
 
     unmounted() { },

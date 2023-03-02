@@ -1,0 +1,13 @@
+.edit-modal{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    min-width: 10%;
+    /* max-width: 70%; */
+    height: 70%;
+    /* margin: 0; */
+    /* z-index: 20; */
+    padding: 20px;
+}
+

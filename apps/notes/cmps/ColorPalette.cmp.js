@@ -1,19 +1,25 @@
 export default {
     template: `
-          <section class="modal-colors round">
-              <span class="color-palette-container">
-                  <span v-for="idx in colors" :class="'bgc' + idx" class="color-palette" @click.stop="setBgClr(idx)"></span>
-              </span>
+          <section class="color-palette">
+                  <div v-for="color in colors" :style="{'background-color:color.color'}" :title="color.title" 
+                  class="color-option" @click.stop="updateColor(color.color)"></div>
           </section>
       `,
     data() {
         return {
-            colors: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+            colors: [
+                { color: '#add8e6', title: 'lightblue' },
+                { color: '#f08080', title: 'lightcoral' },
+                { color: '#20b2aa', title: 'lightseagreen' },
+                { color: '#ffb6c1', title: 'lightpink' },
+                { color: '#ffa07a', title: 'lightsalmon' },
+                { color: '#fafad2', title: 'lightgoldenrodyellow' },
+            ],
         }
     },
     methods: {
-        setBgClr(idx) {
-            this.$emit('setBgClr', 'bgc' + idx)
+        updateColor(color) {
+            this.$emit('updateColor', color)
         }
     },
 

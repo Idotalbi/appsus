@@ -47,6 +47,7 @@
         margin-inline-end: -26px;
     }
 
+    
 }
 
 @media (min-width: 500px) {
@@ -125,11 +126,13 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .main-details{
+    .main-details {
         justify-self: end;
     }
-
+ 
 }
+
+
 
 @media (min-width: 1570px) {
     .book-list ul {
