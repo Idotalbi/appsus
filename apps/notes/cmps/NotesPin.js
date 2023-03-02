@@ -17,7 +17,6 @@ export default {
     components: {
         NotePreview,
     },
-    mounted() { },
     methods: {
         togglePin(noteId) {
             this.$emit('togglePin', noteId)

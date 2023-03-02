@@ -5,6 +5,7 @@ export default {
 <section class ="search-container">
 <div class="search-nav round">
     <input type="search" @input="setFilter" v-model="filterBy.txt" placeholder="Search Notes">
+    <i class="fa-solid fa-magnifying-glass"></i>
     <select v-model="filterBy.type" @change="setFilter" class="round">
         <option value='all'>All</option>
         <option value ='textCmp'>Text</option>
