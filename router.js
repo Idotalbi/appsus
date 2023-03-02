@@ -6,6 +6,7 @@ import MailApp from './pages/MailApp.js'
 import EmailList from './apps/mail/cmps/EmailList.cmp.js'
 import EmailDetails from './apps/mail/pages/‏‏EmailDetails.cmp.js'
 import NotesApp from './pages/NotesApp.js'
+import NoteDetails from './apps/notes/cmps/NoteDetails.js'
 
 
 const routes = [
@@ -42,8 +43,11 @@ const routes = [
   {
     path: '/notes',
     component: NotesApp,
-  }
-]
+  }    {
+      path: '/notes/:noteId',
+      component: NoteDetails,
+    },
+
 
 
 export const router = VueRouter.createRouter({

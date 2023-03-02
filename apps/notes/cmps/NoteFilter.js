@@ -1,27 +1,26 @@
 
-
 export default {
     template: `
-<section class ="search-container">
-<div class="search-nav round">
-    <input type="search" @input="setFilter" v-model="filterBy.txt" placeholder="Search Notes">
-    <select v-model="filterBy.type" @change="setFilter" class="round">
-        <option value='all'>All</option>
-        <option value ='textCmp'>Text</option>
-        <option value ='imgCmp'>Image</option>
-        <option value ='videoCmp'>Video</option>
-        <option value="soundCmp">Sound</option>
-        <option value="listCmp">List</option>
+<section class ="notes-filter-container">
+    <input type="search" @input="setFilter" v-model="filterBy.title" placeholder="Search Notes"/>
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <select v-model="filterBy.type" @change="setFilter">
+    <option disabled value="">Select</option>
+        <option value=''>All</option>
+        <option value ='note-txt'>Text</option>
+        <option value ='note-img'>Image</option>
+        <option value ='note-video'>Video</option>
+        <option value="note-sound">Sound</option>
+        <option value="note-todo">Todos</option>
     </select>
-</div>
 
 </section>
 `,
     data() {
         return {
             filterBy: {
-                txt: '',
-                type: 'all'
+                title: '',
+                type: '',
             },
         }
     },

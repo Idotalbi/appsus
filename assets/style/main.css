@@ -31,3 +31,12 @@
 /* notes */
 
 @import '/assets/apps/notes/note-app.css';
+@import '/assets/apps/notes/note-search.css';
+@import '/assets/apps/notes/note-edit.css';
+@import '/assets/style/cmps/ColorPalette.css';
+@import '/assets/style/cmps/NotesAdd.css';
+@import '/assets/style/cmps/NotesDetails.css';
+@import '/assets/style/cmps/NotesVideo.css';
+@import '/assets/style/cmps/Modal.css';
+@import '/assets/style/cmps/Filter.css';
+@import '/assets/style/cmps/NotesApp.css';
